@@ -3,7 +3,7 @@
   hosts: jenkins_slave
   become: yes
   tasks:
-    - name: Install base packages
+    - name: Install  packages
       apt:
         name:
           - openjdk-11-jdk
