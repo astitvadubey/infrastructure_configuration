@@ -11,18 +11,6 @@
           - git
         update_cache: yes
     
-    - name: Install Docker
-      apt:
-        name: docker.io
-        state: present
-        update_cache: yes
-        
-    - name: Start Docker service
-      service:
-        name: docker
-        state: started
-        enabled: yes
-        
     - name: Add Docker repository prerequisites
       apt:
         name:
@@ -56,8 +44,18 @@
         enabled: yes
 
 
-
-# ---
+#  - name: Install Docker
+#       apt:
+#         name: docker.io
+#         state: present
+#         update_cache: yes
+        
+#     - name: Start Docker service
+#       service:
+#         name: docker
+#         state: started
+#         enabled: yes
+# # ---
 # - name: Install Java, Maven, Git, and Docker
 #   hosts: jenkins_slave
 #   become: yes
